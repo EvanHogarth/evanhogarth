@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #FFFFFF;
+  font-family: sans-serif;
+  color: #0A0A0A;
+
+  overflow-x: hidden;
+}
+
+
+.main-container {
+  /* display: flex; */
+}
+
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+
+.circle {
+  background-color: #2F3841;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  border-radius: 1000px;
+}
