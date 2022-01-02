@@ -1,0 +1,445 @@
+/**
+
+    Project 3
+    Name: Evan Hogarth
+    Date: December 31, 2021
+    Description: The final project for Web Dev 1.
+      A custom portfolio site with 3 pages with a common nav, header, and footer.
+      Contact page with working form validation.
+
+**/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  background-color: #f5f5f4;
+  color: #000000;
+}
+
+p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 30px;
+}
+
+nav #logo {
+  height: 31px;
+}
+
+nav span {
+  display: flex;
+  align-items: center;
+}
+
+nav span a {
+  text-decoration: none;
+  color: #000;
+  margin: 20px 10px;
+}
+nav span a:hover {
+  color: #a0a09f;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 125px);
+  margin: 0px 40px;
+}
+
+main h1 {
+  font-size: 50px;
+  margin: 20px 0px;
+}
+
+main p {
+  margin: 30px 0px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+main .container {
+  width: 40vw;
+}
+
+main .main-image {
+  width: 110%;
+  /* height: 752px; */
+}
+
+footer {
+  position: relative;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4b4b4b;
+  font-size: 14px;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+}
+
+footer ul li a {
+  margin: 0px 20px;
+  text-decoration: none;
+  color: #a0a09f;
+}
+footer ul li a:hover {
+  color: #4b4b4b;
+}
+
+#landing-arrow {
+  display: none;
+}
+#contact-arrow {
+
+}
+
+
+/* HOME PAGE */
+
+
+
+
+/* PROJECTS PAGE */
+#projects-content {
+  min-height: calc(100vh - 68px);
+}
+
+#projects-content section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+#projects-content section:first-of-type {
+  margin-top: 140px;
+}
+
+.project-images {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid #000; */
+  margin-top: 20px;
+}
+
+main .arrow {
+  position: absolute;
+  bottom: 40px;
+  width: 40px;
+  z-index: 5;
+}
+main .arrow:hover {
+  cursor: pointer;
+}
+
+section .container {
+  width: 40vw;
+  margin: 30px;
+}
+
+.project-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 40px;
+}
+.project-section:last-of-type {
+  margin: 100px 40px 200px 40px;
+}
+
+.project-section h2 {
+  margin: 20px 0px;
+}
+
+
+/* CONTACT PAGE */
+#contact-content {
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+}
+
+#contact-content .container {
+  width: 80vw;
+  height: calc(100vh - 75px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#contact-content .container div {
+  width: 80%;
+}
+
+#contact-content #form-container {
+  width: 80vw;
+  justify-content: center;
+}
+
+
+#contact fieldset {
+  border: none;
+}
+
+#contact fieldset ul {
+  list-style: none;
+}
+
+#contact fieldset ul li {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  max-width: 800px;
+  margin: 20px 0px;
+  flex-wrap: wrap;
+}
+
+#contact fieldset ul #buttons-list {
+  justify-content: flex-start;
+}
+
+#contact input {
+  width: 60%;
+  height: 20px;
+  padding: 0px 5px;
+}
+
+#message-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact textarea {
+  width: calc(100% - 12px);
+  height: 120px;
+  padding: 5px;
+  margin-top: 10px;
+  font-family: sans-serif;
+  resize: none;
+}
+#contact textarea:focus {
+  background-color: #555;
+  color: white;
+}
+
+#contact button {
+  width: 90px;
+  height: 26px;
+  margin-right: 10px;
+  border-radius: 1px;
+  border: none;
+  background-color: #181818;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+#contact button:hover {
+  cursor: pointer;
+  background-color: #313131;
+}
+
+.contact-error {
+  display: none;
+  width: 100%;
+  color: red;
+}
+
+#contact input:focus {
+  background-color: #555;
+  color: white;
+}
+
+#contact hr {
+  width: 100%;
+  border: none;
+  height: 0;
+  margin: 0;
+}
+
+
+/* TABLET VIEW */
+@media only screen and (max-width: 860px) {
+  nav {
+    margin: 0px 20px;
+  }
+
+  nav span a {
+    margin: 20px 10px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  main .container {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  main .main-image {
+    width: 80%;
+    align-self: center;
+    /* height: 752px; */
+  }
+
+/* PROJECTS PAGE */
+  section .container {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  section .container img {
+    width: 80%;
+    align-self: center;
+  }
+
+  .project-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 40px;
+  }
+
+  #image-holder {
+    order: -1;
+  }
+
+/* CONTACT PAGE */
+  #contact-content .container {
+    width: 80vw;
+    height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #contact-content .container div {
+    width: 100%;
+  }
+  #contact-content .container #contact-image-hold {
+    display: flex;
+    justify-content: center;
+  }
+  /* #contact-content .container:last-of-type {
+    height: calc(100vh - 75px);
+  } */
+
+  #contact-content #form-container {
+    width: 80vw;
+  }
+
+  #contact fieldset ul li {
+    width: 80vw;
+    margin: 20px 0px;
+  }
+
+  #contact input {
+    width: 60%;
+  }
+}
+
+/* MOBILE VIEW */
+@media only screen and (max-width: 500px) {
+  nav {
+    margin: 0px 10px;
+  }
+
+  nav span a {
+    margin: 15px 10px;
+  }
+
+  main {
+    margin: 0px 20px;
+  }
+
+  main h1 {
+    font-size: 40px;
+    margin: 20px 0px 10px 0px;
+  }
+
+  main .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  main .main-image {
+    width: 100%;
+    align-self: center;
+    /* height: 752px; */
+  }
+
+  /* PROJECT PAGE */
+  section .container {
+    margin: 20px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  section .container img {
+    width: 100%;
+    align-self: center;
+  }
+
+  .project-section {
+    margin: 80px 20px;
+  }
+
+  .project-section:last-of-type {
+    margin: 100px 20px 100px 20px;
+  }
+
+  /* CONTACT PAGE */
+  #contact-content .container {
+    width: 100%;
+    height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #contact-content .container div {
+    width: 100%;
+  }
+  #contact-content #form-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #form-container #contact {
+    width: 100%;
+  }
+
+
+  #contact fieldset ul li {
+    width: 100%;
+    margin: 20px 0px;
+  }
+
+  #contact input {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

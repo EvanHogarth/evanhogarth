@@ -1,0 +1,92 @@
+<!--
+
+    Project 3
+    Name: Evan Hogarth
+    Date: December 31, 2021
+    Description: The final project for Web Dev 1.
+      A custom portfolio site with 3 pages with a common nav, header, and footer.
+      Contact page with working form validation.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Evan Hogarth</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="images/logo.png">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <span>
+        <a href="index.html"><img id="logo" src="images/logo.png" alt="logo"></a>
+        <a href="index.html">Evan Hogarth</a>
+      </span>
+      <span>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </span>
+    </nav>
+
+    <main id="projects-content">
+      <div class="container">
+        <h1>Projects</h1>
+        <p>
+          Some recent projects I have created can be found below. <br><br>
+          I work with various technologies and am always open to learning new skills.<br>
+          <br>
+          Live versions will be added at a later date.<br>
+        </p>
+      </div>
+
+      <div class="container">
+        <img class="main-image" src="images/projects.svg" alt="">
+      </div>
+
+      <img id="projects-arrow" class="arrow" src="images/arrow.svg" alt="">
+    </main>
+
+    <section class="project-section">
+      <div class="container">
+        <img class="project-images" src="images/pomodoro.jpeg" alt="pomodoro">
+      </div>
+      <div class="container">
+        <h2>Pomodoro App</h2>
+        <p>
+          This project is a productivity timer. It has a modifiable timer feature that is able
+          to set different values and modes to count up or down. The app will have a database
+          to store user profiles and track how many sessions and time has been completed, amoung other stats.
+          <br>
+           Uses: HTML, CSS, JavaScript.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <div class="container">
+        <h2>Easybank Landing Page</h2>
+        <p>
+          This project is a simple responsive landing page for a fictional company. It showcases various uses of
+          CSS and JavaScript to create a good user experience.
+          <br>
+           Uses: HTML, CSS, JavaScript.
+        </p>
+      </div>
+      <div id="image-holder" class="container">
+        <img class="project-images" src="images/easybank.jpeg" alt="easybank">
+      </div>
+    </section>
+
+    <footer>
+      <ul>
+        <li><a href="index.html">Evan Hogarth</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
