@@ -1,0 +1,103 @@
+<!--
+
+    Project 3
+    Name: Evan Hogarth
+    Date: December 31, 2021
+    Description: The final project for Web Dev 1.
+      A custom portfolio site with 3 pages with a common nav, header, and footer.
+      Contact page with working form validation.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Evan Hogarth</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="images/logo.png">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <span>
+        <a href="index.html"><img id="logo" src="images/logo.png" alt="logo"></a>
+        <a href="index.html">Evan Hogarth</a>
+      </span>
+      <span>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </span>
+    </nav>
+
+    <main id="contact-content">
+      <div class="container">
+        <div>
+          <h1>Contact</h1>
+          <p>
+            I am available for opportunities and am happy to discuss any projects or questions.
+            <br><br>If you would like to get in touch with me, please fill out the form below.
+          </p>
+        </div>
+
+        <div id="contact-image-hold">
+          <img class="main-image" src="images/contact.svg" alt="">
+        </div>
+      </div>
+
+      <div id="form-container" class="container">
+        <form id="contact" action="index.html">
+          <fieldset>
+            <ul>
+              <li>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+                <hr>
+                <div class="contact-error" id="name-error">
+                  Please enter your name.
+                </div>
+              </li>
+              <li>
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" id="phone">
+                <hr>
+                <div class="contact-error" id="phone-error">
+                  Please enter your phone number.
+                </div>
+              </li>
+              <li>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <hr>
+                <div class="contact-error" id="email-error">
+                  Please enter your email.
+                </div>
+              </li>
+              <li id="message-container">
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+                <hr>
+              </li>
+              <li id="buttons-list">
+                <button type="submit" name="submit">SUBMIT</button>
+                <button type="reset" name="reset">RESET</button>
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+      </div>
+
+      <img id="contact-arrow" class="arrow" src="images/arrow.svg" alt="">
+    </main>
+
+    <footer>
+      <ul>
+        <li><a href="index.html">Evan Hogarth</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
